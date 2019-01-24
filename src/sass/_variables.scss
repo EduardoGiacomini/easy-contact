@@ -1,0 +1,29 @@
+/**
+ * Colors
+
+ #7ED56F - Green Light  -
+ #28B485 - Green Dark   -
+ #FFB900 - Orange Light -
+ #FF7730 - Orange Dark  -
+ #2998FF - Blue Light   -
+ #5643FA - Blue Dark    -
+ #F04747 - Red Error    -
+ #EBEBEB - Grey Light   -
+ #333333 - Grey Dark    -
+ #484C52 - Grey Dark 2  -
+ #999999 - Grey Dark 3  -
+
+ */
+
+:root {
+    --color-primary-light: #2998FF;
+    --color-primary-dark: #5643FA; 
+
+    --color-grey-light: #EBEBEB;
+    --color-grey-dark: #333333;
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --default-font-size: 1.6rem;
+}

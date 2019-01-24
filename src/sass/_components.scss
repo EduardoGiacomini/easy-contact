@@ -1,0 +1,71 @@
+/*
+ * Components elements
+ */
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        border: 2px solid var(--color-grey-dark);
+        background-color: transparent;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--color-grey-dark);
+        font-weight: 700;
+
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+    &--icon {
+        border: 2px solid var(--color-white);
+
+        display: flex;
+        align-items: center;
+
+        &__icon {
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+            fill: var(--color-white);
+        }
+
+        &__text {
+            color: var(--color-white);
+        }
+    }
+
+    &--primary {
+        background-image: linear-gradient(
+            to right bottom,
+            var(--color-primary-light),
+            var(--color-primary-dark)
+        );
+        border: none;
+        color: var(--color-white);
+
+        &:hover {
+            background-image: linear-gradient(
+                to left top,
+                var(--color-primary-light),
+                var(--color-primary-dark)
+            );
+        }
+    }
+}

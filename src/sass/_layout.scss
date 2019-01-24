@@ -1,0 +1,60 @@
+/*
+ * Layouts definitions
+ */
+
+.header {
+    min-height: 40vh;
+    padding: 4rem;
+    background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary-dark),
+    );
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo-box {
+        height: 6.5rem;
+        width: 6.5rem;
+    }
+
+    &__logo {
+        height: 6.5rem;
+    }
+
+    &__text-box {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    &__title {
+        color: var(--color-white);
+        text-transform: uppercase;
+        backface-visibility: hidden;
+
+        &--main {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1rem;
+        }
+
+        &--sub {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: .25rem;
+        }
+    }
+
+    &__actions {
+        display: flex;
+
+        & > *:not(:last-child) {
+            margin-right: 2rem;
+        }        
+    }
+}
