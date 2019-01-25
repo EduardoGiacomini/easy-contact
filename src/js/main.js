@@ -5,4 +5,16 @@ import '../sass/main.scss';
 import Form from './form';
 
 const FormContact = new Form({ element: document.querySelector('#form-contact') });
-document.querySelector('#btn-new-contact').addEventListener('click', () => FormContact.toggleForm());
+
+document.querySelector('#btn-new-contact').addEventListener('click', () => {
+    const icon = document.querySelector('#btn-new-contact svg');
+    icon.style.transition = "all .3s";
+
+    if (icon.style.transform === "" || icon.style.transform === "rotate(0deg)") {
+        icon.style.transform = "rotate(180deg)"
+    } else {
+        icon.style.transform = "rotate(0deg)"
+    }
+
+    FormContact.toggleForm()
+});
