@@ -7,7 +7,12 @@
  #FF7730 - Orange Dark  -
  #2998FF - Blue Light   -
  #5643FA - Blue Dark    -
+ #4d4af7 - Purple Light -
+ #4130df - Purple Dark  -
+ #f05e5e - Red Light    -
+ #da4141 - Red Dark     -
  #F04747 - Red Error    -
+ #F04747 
  #EBEBEB - Grey Light   -
  #333333 - Grey Dark    -
  #484C52 - Grey Dark 2  -
@@ -16,7 +21,7 @@
  */
 
 :root {
-    --color-primary-light: #2998FF;
+    --color-primary-light: #2998FF ;
     --color-primary-dark: #5643FA; 
 
     --color-grey-light: #EBEBEB;

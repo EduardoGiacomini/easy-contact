@@ -12,6 +12,11 @@
 
 <body>
     <header class="header">
+        <a href="#popup" class="header__color-picker" title="Escolha um novo tema">
+            <svg class="header__color-picker--icon">
+                <use xlink:href="assets/sprite.svg#icon-droplet"></use>
+            </svg>
+        </a>
         <div class="header__logo-box" title="Easy Contact Logo">
             <img class="header__logo" src="assets/logo.svg" alt="Logo" />
         </div>
@@ -21,7 +26,7 @@
                 <span class="header__title--sub">Organizar os seus contatos pessoais nunca foi tão fácil!</span>
             </h1>
         </div>
-        <div class="header__actions">
+        <div class="header__actions-box">
             <button class="btn btn--icon">
                 <svg class="btn--icon__icon">
                     <use xlink:href="assets/sprite.svg#icon-envelop"></use>
@@ -42,6 +47,32 @@
             </button>
         </div>
     </header>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#" class="popup__close">&times;</a>
+            <h3 class="popup__text">Selecione um dos temas disponíveis:</h3>
+            <div class="popup__options">
+                <div class="popup__options--item">
+                    <button class="popup__color-picker popup__color-picker--1">&nbsp;</button>
+                    <span class="popup__color-picker--text">Oceano</span>
+                </div>
+                <div class="popup__options--item">
+                    <button class="popup__color-picker popup__color-picker--2">&nbsp;</button>
+                    <span class="popup__color-picker--text">Natureza</span>
+                </div>
+                <div class="popup__options--item">
+                    <button class="popup__color-picker popup__color-picker--3">&nbsp;</button>
+                    <span class="popup__color-picker--text">Ensolorado</span>
+                </div>
+                <div class="popup__options--item">
+                    <button class="popup__color-picker popup__color-picker--4">&nbsp;</button>
+                    <span class="popup__color-picker--text">Vermelidão</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
     <script src="./bundle.js"></script>
 </body>
