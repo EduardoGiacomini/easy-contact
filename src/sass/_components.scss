@@ -254,10 +254,13 @@
     max-width: 60rem;
     margin: 0 auto;
     border-radius: 4px;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
     padding: 2rem;
     position: relative;
-    transform: translateY(1px);
+    visibility: hidden;
+    transition: all 1s ease, z-index 1s ease 1s;
+
+    z-index: -10;
+    transform: translateY(-100%);
 
     &__title {
         text-transform: uppercase;
