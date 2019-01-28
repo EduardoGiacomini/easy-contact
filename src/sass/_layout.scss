@@ -3,7 +3,6 @@
  */
 
 .header {
-    min-height: 40vh;
     padding: 4rem;
     background-image: linear-gradient(
         to right bottom,
@@ -94,4 +93,12 @@
             margin-right: 2rem;
         }        
     }
+}
+
+.main {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

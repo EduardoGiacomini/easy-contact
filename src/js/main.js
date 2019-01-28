@@ -11,9 +11,9 @@ document.querySelector('#btn-new-contact').addEventListener('click', () => {
     icon.style.transition = "all .3s";
 
     if (icon.style.transform === "" || icon.style.transform === "rotate(0deg)") {
-        icon.style.transform = "rotate(180deg)"
+        icon.style.transform = "rotate(180deg)";
     } else {
-        icon.style.transform = "rotate(0deg)"
+        icon.style.transform = "rotate(0deg)";
     }
 
     FormContact.toggleForm()
