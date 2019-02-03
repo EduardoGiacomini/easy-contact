@@ -320,11 +320,11 @@
 .card {
     width: 40rem;
     padding: 2rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem;
+    margin: 2rem;
     transition: all .2s;
 
     &:not(:last-child) {
@@ -333,7 +333,7 @@
 
     &:hover {
         transform: scale(1.05);
-        box-shadow: 0 2rem 3rem rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .2);
     }
 
     &__content {
