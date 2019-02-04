@@ -102,3 +102,31 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.footer {
+    padding: 2rem 3rem;
+    background-color: rgba(51, 51, 51, .9);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &__text {
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 0 2rem;
+        color: var(--color-grey-light);
+    }
+
+    &__link {
+        color: var(--color-white);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: all .2s;
+
+        &:hover {
+            border-bottom: 2px solid var(--color-white);                
+        }
+    }
+  }
+  
