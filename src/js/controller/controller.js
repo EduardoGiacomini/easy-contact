@@ -1,4 +1,4 @@
-import LocalStorage from './localStorage';
+import LocalStorage from '../utilities/localStorage';
 
 export default class Controller {
     constructor({ ref }) {
