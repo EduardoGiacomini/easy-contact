@@ -1,10 +1,16 @@
 export default class GenerateHTMLCode {
 
-    static generateCard(ref, contact) {
+    static generateCard(ref, contacts = []) {
 
-        const { id, name, email, phone } = contact;
+        document.querySelector(ref).innerHTML = "";
 
-        const card =
+        let cards = "";
+        
+        for (let index = 0; index < contacts.length; index++) {
+
+            const { id, name, email, phone } = contacts[index];
+
+            const card =
             `
                 <div class="card" id="${id}">
                     <div class="card__content">
@@ -33,7 +39,7 @@ export default class GenerateHTMLCode {
                                 <use xlink:href="assets/sprite.svg#icon-pencil"></use>
                             </svg>
                         </button>
-                        <button class="card__options--btn">
+                        <button class="card__options--btn" onclick="onDelete(${id})">
                             <svg class="card__options--icon card__options--icon-trash">
                                 <use xlink:href="assets/sprite.svg#icon-bin2"></use>
                             </svg>
@@ -41,7 +47,10 @@ export default class GenerateHTMLCode {
                     </div>
                 </div>
             `;
-        document.querySelector(ref).insertAdjacentHTML('afterbegin', card);
+            cards += card;
+        }
+
+        document.querySelector(ref).insertAdjacentHTML('afterbegin', cards);
     }
 
 }

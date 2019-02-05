@@ -6,6 +6,12 @@ import Form from './form';
 
 const FormContact = new Form({ element: document.querySelector('#form-contact') });
 
+document.querySelector('#form-contact').addEventListener('submit', event => FormContact.onSubmit(event, '.form__input'));
+
+function onDelete(id) {
+    console.log(id);
+};
+
 document.querySelector('#btn-new-contact').addEventListener('click', () => {
     const icon = document.querySelector('#btn-new-contact svg');
     icon.style.transition = "all .3s";

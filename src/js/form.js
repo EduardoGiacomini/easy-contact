@@ -1,3 +1,8 @@
+import Controller from './controller/controller';
+
+const ControllerContact = new Controller('contacts');
+ControllerContact.initialize();
+
 export default class Form {
     constructor({ element }) {
         this.isOpen = false;
@@ -24,4 +29,28 @@ export default class Form {
             this.element.style.transition = "all 1s ease";
         }
     };
+
+    onSubmit(event, ref) {
+        event.preventDefault();
+
+        const inputs = document.querySelectorAll(ref);
+
+        const [name, email, phone] = inputs;
+
+        const contact = {
+            id: window.crypto.getRandomValues(new Uint32Array(1))[0],
+            name: name.value,
+            email: email.value,
+            phone: phone.value,
+        };
+
+        ControllerContact.save(contact);
+
+        this.clearInputs(inputs);
+    };
+
+    clearInputs(inputs) {
+        inputs.forEach(item => item.value = "");
+    };
+
 };
