@@ -8,8 +8,8 @@ const FormContact = new Form({ element: document.querySelector('#form-contact') 
 
 document.querySelector('#form-contact').addEventListener('submit', event => FormContact.onSubmit(event, '.form__input'));
 
-function onDelete(id) {
-    console.log(id);
+Window.prototype.onDelete = id => {
+    confirm(`Tem certeza que deseja excluir este contato?`).valueOf() === true ? FormContact.onDelete(id) : false;
 };
 
 document.querySelector('#btn-new-contact').addEventListener('click', () => {

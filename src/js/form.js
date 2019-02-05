@@ -53,4 +53,8 @@ export default class Form {
         inputs.forEach(item => item.value = "");
     };
 
+    onDelete(id) {
+        ControllerContact.delete(id);
+    };
+
 };
