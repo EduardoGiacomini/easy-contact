@@ -5,6 +5,7 @@ export default class LocalStorage {
     };
 
     static save(ref, item) {
+        console.log(item)
         localStorage.setItem(ref, JSON.stringify(item));
     };
 
