@@ -17,6 +17,14 @@
     "Webpack"
   ],
   "author": "Eduardo Giacomini <carloseduardo.diasgiacomini@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/EduardoGiacomini/easy-contact/issues",
+    "email": "carloseduardo.diasgiacomini@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EduardoGiacomini/easy-contact"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
