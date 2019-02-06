@@ -34,11 +34,6 @@ export default class GenerateHTMLCode {
                                 <use xlink:href="assets/sprite.svg#icon-star-full"></use>
                             </svg>
                         </button>
-                        <button class="card__options--btn">
-                            <svg class="card__options--icon card__options--icon-pencil">
-                                <use xlink:href="assets/sprite.svg#icon-pencil"></use>
-                            </svg>
-                        </button>
                         <button class="card__options--btn" onclick="onDelete(${id})">
                             <svg class="card__options--icon card__options--icon-trash">
                                 <use xlink:href="assets/sprite.svg#icon-bin2"></use>
@@ -48,9 +43,9 @@ export default class GenerateHTMLCode {
                 </div>
             `;
             cards += card;
-        }
+        };
 
         document.querySelector(ref).insertAdjacentHTML('afterbegin', cards);
-    }
+    };
 
-}
+};

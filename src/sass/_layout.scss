@@ -85,14 +85,6 @@
             letter-spacing: .25rem;
         }
     }
-
-    &__actions-box {
-        display: flex;
-
-        & > *:not(:last-child) {
-            margin-right: 2rem;
-        }        
-    }
 }
 
 .main {
@@ -112,6 +104,7 @@
 
     &__text {
         font-size: 1.6rem;
+        line-height: 2;
         text-align: center;
         margin: 0 2rem;
         color: var(--color-grey-light);
@@ -123,6 +116,10 @@
         text-decoration: none;
         border-bottom: 2px solid transparent;
         transition: all .2s;
+
+        &--icon {
+            line-height: 2;
+        }
 
         &:hover {
             border-bottom: 2px solid var(--color-white);                
