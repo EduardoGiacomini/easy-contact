@@ -9,3 +9,5 @@ document.querySelector('#form-contact').addEventListener('submit', event => Form
 Window.prototype.onDelete = id => {
     confirm(`Tem certeza que deseja excluir este contato?`).valueOf() === true ? FormContact.onDelete(id) : false;
 };
+
+Window.prototype.onFavorite = id => FormContact.onFavorite(id);

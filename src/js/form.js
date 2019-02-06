@@ -17,6 +17,7 @@ export default class Form {
             name: name.value,
             email: email.value,
             phone: phone.value,
+            favorite: false,
         };
 
         ControllerContact.save(contact);
@@ -26,6 +27,10 @@ export default class Form {
 
     static onDelete(id) {
         ControllerContact.delete(id);
+    };
+
+    static onFavorite(id) {
+        ControllerContact.favorite(id);
     };
 
 };

@@ -18,17 +18,18 @@ export default class Controller {
         this.list();
     };
 
-    update(params) {
-        this.items = this.items.filter(item => item.id !== params.id);
-        this.saveItem(params);
-    };
-
     list() {
         GenerateHTMLCode.generateCard('.main', this.items);
     };
 
     delete(id) {
         this.items = this.items.filter(item => item.id !== id);
+        LocalStorage.save(this.ref, this.items);
+        this.list();
+    };
+
+    favorite(id) {
+        this.items = this.items.map(item => item.id === id ? { ...item, favorite: !item.favorite, } : item);
         LocalStorage.save(this.ref, this.items);
         this.list();
     };

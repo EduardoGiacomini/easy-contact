@@ -8,7 +8,7 @@ export default class GenerateHTMLCode {
         
         for (let index = 0; index < contacts.length; index++) {
 
-            const { id, name, email, phone } = contacts[index];
+            const { id, name, email, phone, favorite } = contacts[index];
 
             const card =
             `
@@ -29,12 +29,25 @@ export default class GenerateHTMLCode {
                         </div>
                     </div>
                     <div class="card__options">
-                        <button class="card__options--btn">
-                            <svg class="card__options--icon card__options--icon-star">
-                                <use xlink:href="assets/sprite.svg#icon-star-full"></use>
-                            </svg>
-                        </button>
-                        <button class="card__options--btn" onclick="onDelete(${id})">
+                        ${
+                            favorite === true ?
+                            `
+                                <button class="card__options--btn" title="Remover dos favoritos" onclick="onFavorite(${id})">
+                                    <svg class="card__options--icon card__options--icon-star">
+                                        <use xlink:href="assets/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </button>
+                            ` :
+                            `
+                                <button class="card__options--btn" title="Favoritar" onclick="onFavorite(${id})">
+                                    <svg class="card__options--icon card__options--icon-star">
+                                        <use xlink:href="assets/sprite.svg#icon-star-empty"></use>
+                                    </svg>
+                                </button>
+                            `
+                        }
+                        
+                        <button class="card__options--btn" title="Excluir" onclick="onDelete(${id})">
                             <svg class="card__options--icon card__options--icon-trash">
                                 <use xlink:href="assets/sprite.svg#icon-bin2"></use>
                             </svg>
