@@ -128,6 +128,16 @@
         display: flex;
         justify-content: space-around;
 
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+
+            @media only screen and (max-width: $bp-small) {
+                & > *:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
         &--item {
             display: flex;
             flex-direction: column;
@@ -226,6 +236,10 @@
             text-align: center;
             font-weight: 700;
             margin-top: 2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                margin-top: 1rem;
+            }
         }
     }
 }
@@ -237,6 +251,11 @@
     padding: 2rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+        max-width: auto;
+        margin: 0 3rem;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -290,6 +309,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+
+            & > * {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
     }
 }
   
@@ -303,8 +334,11 @@
     margin: 2rem;
     transition: all .2s;
 
-    &:not(:last-child) {
-        margin-right: 3rem;
+    @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        flex-direction: column;
     }
 
     &:hover {
@@ -313,7 +347,6 @@
     }
 
     &__content {
-        width: 80%;
 
         &--title {
             display: block;
@@ -321,6 +354,11 @@
             font-weight: 700;
             letter-spacing: .1rem;
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
         }
 
         &--information {
@@ -337,17 +375,31 @@
             width: 2.5rem;
             margin-right: 1rem;
             fill: var(--color-primary-light);
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 2rem;
+                width: 2rem;
+            }
+        
         }
 
         &--text {
             font-size: 1.4rem;
             line-height: 2.5;
+            
+            @media only screen and (max-width: $bp-medium) {
+                line-height: 2;
+            }
         }
     }
 
     &__options {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 2rem auto 0 auto;
+        }
 
         &--btn {
             width: 3rem;
@@ -358,6 +410,10 @@
 
             &:not(:last-child) {
                 margin-right: 1rem;
+
+                @media only screen and (max-width: $bp-medium) {
+                    margin-right: 2rem;
+                }
             }
         }
 
@@ -366,6 +422,7 @@
             height: 2.5rem;
             fill: var(--color-grey-dark);
             transition: all .2s;
+
 
             &-star {
                 fill: #FFB900;

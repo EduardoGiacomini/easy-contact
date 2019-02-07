@@ -93,6 +93,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
 }
 
 .footer {
