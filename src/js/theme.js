@@ -26,7 +26,7 @@ export default class Theme {
      * @param {*} colorPrimaryDark = Cor primária escura - colorPrimaryDark = String;
      */
     static onChangeTheme(colorPrimaryLight, colorPrimaryDark) {
-        window.location.href = "/#";
+        window.location.href = "/easy-contact/#";
 
         const root = document.documentElement;
 
