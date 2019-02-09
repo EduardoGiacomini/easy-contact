@@ -1,7 +1,13 @@
 # :email: Easy Contact
 **Live demo:** [https://eduardogiacomini.github.io/easy-contact/](https://eduardogiacomini.github.io/easy-contact/)
 
-A simple application designed to store your contacts. This application was developed with HTML, CSS, Sass and JavaScript ES6+. All data is stored in LocalStorage
+A simple application designed to store your contacts. This application was developed with HTML, CSS, Sass and JavaScript ES6+. All data is stored in LocalStorage.
+
+## Overview:
+
+![mockup-easy-contact](https://user-images.githubusercontent.com/31314944/52521677-d647f280-2c61-11e9-82dc-dacd53d19a2d.png)
+
+**Thanks _[Jamboe](https://www.jamboe.net/)_ for the awesome mockup.**
 
 ## Main feature
 
@@ -29,7 +35,6 @@ const root = document.documentElement;
 root.style.setProperty('--color-primary', '#7ED56F');
 ```
 4. Wow, this is awesome. All the paragraphs on your site has their colors changed dynamically.
-
 
 ## Usage
 
