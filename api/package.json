@@ -1,11 +1,10 @@
 {
-  "name": "easy-contact",
+  "name": "easy-contact-app",
   "version": "1.0.0",
   "description": "A simple JavaScript application to manage your contacts",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
-    "build": "webpack --mode=production"
+    "dev": "nodemon -r dotenv/config"
   },
   "keywords": [
     "contacts manager",
@@ -26,18 +25,10 @@
     "url": "https://github.com/EduardoGiacomini/easy-contact"
   },
   "license": "MIT",
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
-    "@babel/preset-env": "^7.3.1",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.1"
   }
 }
