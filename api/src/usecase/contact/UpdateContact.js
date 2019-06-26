@@ -1,10 +1,10 @@
 const contactBO = require('../../entity/business/ContactBO')
 
 class UpdateContact {
-    async execute(contact, responder) {
+    async execute(contactId, contact, responder) {
         try {
-            await contactBO.update(contact)
-            responder.success(await contactBO.find(contact._id))
+            await contactBO.update(contactId, contact)
+            responder.success(await contactBO.find(contactId))
         } catch (err) {
             responder.error(err)
         }

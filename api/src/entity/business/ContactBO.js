@@ -17,8 +17,8 @@ class ContactBO {
         return await Contact.findOne({_id: contactId})
     }
 
-    async update(contact) {
-        return await Contact.updateOne({_id: contact._id}, contact)
+    async update(contactId, contact) {
+        return await Contact.updateOne({_id: contactId}, contact)
     }
 }
 

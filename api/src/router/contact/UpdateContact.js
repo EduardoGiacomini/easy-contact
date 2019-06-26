@@ -3,9 +3,10 @@ const Responder = require('../../commons/Responder')
 const updateContact = require('../../usecase/contact/UpdateContact')
 
 const router = express.Router()
-router.patch('/contacts', (req, res, next) => {
+router.patch('/contacts/:contactId', (req, res, next) => {
+    const contactId = req.params.contactId
     const contact = req.body
-    updateContact.execute(contact, new Responder(req, res, next))
+    updateContact.execute(contactId, contact, new Responder(req, res, next))
 })
 
 module.exports = router
