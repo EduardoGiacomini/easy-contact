@@ -5,8 +5,8 @@ class ContactBO {
         return await Contact.create(contact)
     }
 
-    async delete(contact) {
-        return await Contact.remove({_id: contact})
+    async delete(contactId) {
+        return await Contact.remove({_id: contactId})
     }
 
     async findAll() {

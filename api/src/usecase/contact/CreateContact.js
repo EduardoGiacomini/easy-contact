@@ -1,6 +1,6 @@
 const contactBO = require('../../entity/business/ContactBO')
 
-class CreateNewContact {
+class CreateContact {
     async execute(contact, responder) {
         try {
             responder.success(await contactBO.create(contact))
@@ -10,5 +10,5 @@ class CreateNewContact {
     }
 }
 
-const createNewContact = new CreateNewContact()
-module.exports = createNewContact
+const createContact = new CreateContact()
+module.exports = createContact
