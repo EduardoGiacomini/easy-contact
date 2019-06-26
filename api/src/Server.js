@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const createNewContact = require('./router/contact/CreateNewContact')
+const findAllContacts = require('./router/contact/FindAllContacts')
 
 class Server {
     constructor() {
@@ -18,6 +19,7 @@ class Server {
 
     routes() {
         this.express.use('/api', createNewContact)
+        this.express.use('/api', findAllContacts)
     }
 }
 
