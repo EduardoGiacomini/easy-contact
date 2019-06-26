@@ -1,6 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 
+const createNewContact = require('./router/contact/CreateNewContact')
+
 class Server {
     constructor() {
         this.express = express()
@@ -14,7 +16,9 @@ class Server {
         this.express.use(cors())
     }
 
-    routes() {}
+    routes() {
+        this.express.use('/api', createNewContact)
+    }
 }
 
 module.exports = new Server().express
