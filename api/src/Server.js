@@ -4,6 +4,7 @@ const cors = require('cors')
 const createContact = require('./router/contact/CreateContact')
 const deleteContact = require('./router/contact/DeleteContact')
 const findAllContacts = require('./router/contact/FindAllContacts')
+const updateContact = require('./router/contact/UpdateContact')
 
 class Server {
     constructor() {
@@ -22,6 +23,7 @@ class Server {
         this.express.use('/api', createContact)
         this.express.use('/api', deleteContact)
         this.express.use('/api', findAllContacts)
+        this.express.use('/api', updateContact)
     }
 }
 

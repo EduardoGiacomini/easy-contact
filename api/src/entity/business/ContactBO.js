@@ -13,6 +13,10 @@ class ContactBO {
         return await Contact.find({})
     }
 
+    async find(contactId) {
+        return await Contact.findOne({_id: contactId})
+    }
+
     async update(contact) {
         return await Contact.updateOne({_id: contact._id}, contact)
     }
