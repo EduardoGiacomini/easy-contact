@@ -1,4 +1,4 @@
-import GenerateHTMLCode from '../utilities/generateHTMLCode'
+import GeneratorHTMLCode from '../utilities/generatorHTMLCode'
 import axios from '../utilities/axios'
 
 export default class ControllerController {
@@ -51,6 +51,6 @@ export default class ControllerController {
     }
 
     renderContacts() {
-        GenerateHTMLCode.generateCard('.main', this.contacts)
+        GeneratorHTMLCode.generateCard('.main', this.contacts)
     }
 }

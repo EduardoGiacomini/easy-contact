@@ -1,4 +1,4 @@
-export default class GenerateHTMLCode {
+export default class GeneratorHTMLCode {
     static generateCard(ref, contacts = []) {
 
         document.querySelector(ref).innerHTML = ""
