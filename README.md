@@ -19,6 +19,7 @@ Com este projeto eu aprendi muitas coisas interessantes como:
 ### Diagrama de classes
 
 O Diagrama de Classes foi criado com o objetivo de identificar a estrutura básica da entidade que estava sendo tratada e as suas ações.
+
 ![EasyContact-ClassDiagram](https://user-images.githubusercontent.com/31314944/60825548-ea910c80-a179-11e9-89e6-7d0ac970af95.png)
 
 ### Utilizar variáveis CSS
